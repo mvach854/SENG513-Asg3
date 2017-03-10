@@ -1,9 +1,24 @@
 {
   "name": "socket-chat-example",
-  "version": "0.0.1",
-  "description": "my first socket.io app",
+  "version": "1.0.0",
+  "description": "My first socket.io app and chat",
   "dependencies": {
-    "express": "^4.14.1",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
     "socket.io": "^1.7.3"
-  }
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvach854/SENG513-Asg3.git"
+  },
+  "author": "Manorie Vachon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvach854/SENG513-Asg3/issues"
+  },
+  "homepage": "https://github.com/mvach854/SENG513-Asg3#readme"
 }
