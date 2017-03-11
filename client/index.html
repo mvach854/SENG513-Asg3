@@ -1,41 +1,100 @@
-<!doctype html>
+<!-- Content from Bootstrap used in this project -->
+
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Socket.IO Chat</title>
-    <!-- <link rel="stylesheet" href="style.css"-->
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
-  </head>
-  <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-    <script
+    <title>SENG513 - Socket.IO Chat</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--	<script
        src="https://code.jquery.com/jquery-3.1.1.min.js"
        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-       crossorigin="anonymous"></script>
-    <script src="/socket.io/socket.io.js"></script>
- <!--   
-   <script src="/client.js"></script>
-    -->
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-	  $('form').submit(function(){
-		socket.emit('chat message', $('#m').val());
-		$('#m').val('');
-		return false;
-	  });
-	  
-    </script>
+       crossorigin="anonymous"></script>-->
+    <script src="/socket.io/socket.io.js"></script>  
+	<script src="/client.js"></script>
+  </head>
+  <body>
+  
+	<div class="container">
+		<div class="row align-vertical-bottom">
+			<div class="col-md-9">
+				<div class="panel panel-default message-area">
+					<div class="panel-body listing-area">
+						<h1> Here are the messages </h1>
+						<ul id="messages"></ul>
+					</div>
+					<div class="panel-footer typing-area">
+						<form action="">
+							<input id="m" autocomplete="off" />
+						</form>
+					</div> 
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-default users-area">
+					<div class="panel-body align-vertical-bottom">
+						<p> Online users: <p>
+						<div class="user-panel">
+							<ul id="users"></ul>
+						</div>
+						<p> Change your nick: <p>
+					</div>
+					<div class="panel-footer typing-area">
+						<form action="">
+							<input id="n" autocomplete="off" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+  
+  
+<!--		<div class="row">
+			<div class="col-md-9">
+				<div class="row messages-row">
+					<div class="col-md-12">
+						<h1> Here are the messages </h1>
+						<ul id="messages"></ul>
+					</div>
+				</div>
+				<div class="row typing-area-row">
+					<div class="col-md-12">
+						<h1> Type here </h1>
+					</div>
+					<div class="col-md-12">
+						<h1> Change your nick: </h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="row users-row">
+					<div class="col-md-12">
+						<h1> Here are the users </h1>
+					</div>
+					<div class="col-md-12">
+						<h1> Change your nick: </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3">
+				<ul id="messages"></ul>
+				<form action="">
+					<input id="m" autocomplete="off" /><button>Send</button>
+				</form>
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-3">
+			</div>
+		</div> -->
+	</div>
   </body>
 </html>
